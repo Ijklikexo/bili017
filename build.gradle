@@ -1,36 +1,38 @@
 apply plugin: 'maven-publish'
 
-group = 'com.github.Ijklikexo.bili017' // 替换为你的 Gitee 用户名和仓库名
+group = 'com.github.Ijklikexo' // 替换为你的 GitHub 用户名
 version = '1.0.0' // 替换为你想要的版本号
 
 publishing {
     publications {
         ijkplayerJava(MavenPublication) {
-            groupId = 'com.github.Ijklikexo.bili017'
-            artifactId = 'ijkplayer-java'
+            groupId = 'com.github.Ijklikexo'
+            artifactId = 'ijkplayer-java-1.0.0' // 与 .aar 文件名称一致
             version = '1.0.0'
             artifact("ijkplayer-java-1.0.0.aar")
         }
         ijkplayerArmv7a(MavenPublication) {
-            groupId = 'com.github.Ijklikexo.bili017'
-            artifactId = 'ijkplayer-armv7a'
+            groupId = 'com.github.Ijklikexo'
+            artifactId = 'ijkplayer-armv7a-1.0.0' // 与 .aar 文件名称一致
             version = '1.0.0'
             artifact("ijkplayer-armv7a-1.0.0.aar")
         }
         ijkplayerArm64(MavenPublication) {
-            groupId = 'com.github.Ijklikexo.bili017'
-            artifactId = 'ijkplayer-arm64'
+            groupId = 'com.github.Ijklikexo'
+            artifactId = 'ijkplayer-arm64-1.0.0' // 与 .aar 文件名称一致
             version = '1.0.0'
             artifact("ijkplayer-arm64-1.0.0.aar")
         }
         ijkplayerExo(MavenPublication) {
-            groupId = 'com.github.Ijklikexo.bili017'
-            artifactId = 'ijkplayer-exo'
+            groupId = 'com.github.Ijklikexo'
+            artifactId = 'ijkplayer-exo-1.0.0' // 与 .aar 文件名称一致
             version = '1.0.0'
             artifact("ijkplayer-exo-1.0.0.aar")
         }
     }
 }
+
+// 跳过 assemble 任务
 tasks.whenTaskAdded { task ->
     if (task.name == 'assemble') {
         task.enabled = false
