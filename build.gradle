@@ -1,0 +1,38 @@
+apply plugin: 'maven-publish'
+
+group = 'com.github.Ijklikexo.bili017' // 替换为你的 Gitee 用户名和仓库名
+version = '1.0.0' // 替换为你想要的版本号
+
+publishing {
+    publications {
+        ijkplayerJava(MavenPublication) {
+            groupId = 'com.github.Ijklikexo.bili017'
+            artifactId = 'ijkplayer-java'
+            version = '1.0.0'
+            artifact("ijkplayer-java-1.0.0.aar")
+        }
+        ijkplayerArmv7a(MavenPublication) {
+            groupId = 'com.github.Ijklikexo.bili017'
+            artifactId = 'ijkplayer-armv7a'
+            version = '1.0.0'
+            artifact("ijkplayer-armv7a-1.0.0.aar")
+        }
+        ijkplayerArm64(MavenPublication) {
+            groupId = 'com.github.Ijklikexo.bili017'
+            artifactId = 'ijkplayer-arm64'
+            version = '1.0.0'
+            artifact("ijkplayer-arm64-1.0.0.aar")
+        }
+        ijkplayerExo(MavenPublication) {
+            groupId = 'com.github.Ijklikexo.bili017'
+            artifactId = 'ijkplayer-exo'
+            version = '1.0.0'
+            artifact("ijkplayer-exo-1.0.0.aar")
+        }
+    }
+}
+tasks.whenTaskAdded { task ->
+    if (task.name == 'assemble') {
+        task.enabled = false
+    }
+}
