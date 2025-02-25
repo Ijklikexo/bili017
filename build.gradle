@@ -32,9 +32,7 @@ publishing {
     }
 }
 
-// 跳过 assemble 任务
-tasks.whenTaskAdded { task ->
-    if (task.name == 'assemble') {
-        task.enabled = false
-    }
+// 添加 build 任务
+task build {
+    dependsOn publishToMavenLocal
 }
