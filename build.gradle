@@ -1,7 +1,7 @@
 apply plugin: 'maven-publish'
 
 group = 'com.github.Ijklikexo' // 替换为你的 GitHub 用户名
-version = '1.0.0' // 替换为你想要的版本号
+version = '1.0.1' // 替换为你想要的版本号
 
 wrapper {
     gradleVersion = '7.4.2'
@@ -11,27 +11,27 @@ publishing {
     publications {
         ijkplayerJava(MavenPublication) {
             groupId = 'com.github.Ijklikexo'
-            artifactId = 'ijkplayer-java-1.0.0' // 与 .aar 文件名称一致
-            version = '1.0.0'
-            artifact("ijkplayer-java-1.0.0.aar")
+            artifactId = 'ijkplayer-java-1.0.1' // 与 .aar 文件名称一致
+            version = '1.0.1'
+            artifact("ijkplayer-java-1.0.1.aar")
         }
         ijkplayerArmv7a(MavenPublication) {
             groupId = 'com.github.Ijklikexo'
-            artifactId = 'ijkplayer-armv7a-1.0.0' // 与 .aar 文件名称一致
-            version = '1.0.0'
-            artifact("ijkplayer-armv7a-1.0.0.aar")
+            artifactId = 'ijkplayer-armv7a-1.0.1' // 与 .aar 文件名称一致
+            version = '1.0.1'
+            artifact("ijkplayer-armv7a-1.0.1.aar")
         }
         ijkplayerArm64(MavenPublication) {
             groupId = 'com.github.Ijklikexo'
-            artifactId = 'ijkplayer-arm64-1.0.0' // 与 .aar 文件名称一致
-            version = '1.0.0'
-            artifact("ijkplayer-arm64-1.0.0.aar")
+            artifactId = 'ijkplayer-arm64-1.0.1' // 与 .aar 文件名称一致
+            version = '1.0.1'
+            artifact("ijkplayer-arm64-1.0.1.aar")
         }
         ijkplayerExo(MavenPublication) {
             groupId = 'com.github.Ijklikexo'
-            artifactId = 'ijkplayer-exo-1.0.0' // 与 .aar 文件名称一致
-            version = '1.0.0'
-            artifact("ijkplayer-exo-1.0.0.aar")
+            artifactId = 'ijkplayer-exo-1.0.1' // 与 .aar 文件名称一致
+            version = '1.0.1'
+            artifact("ijkplayer-exo-1.0.1.aar")
         }
     }
 }
